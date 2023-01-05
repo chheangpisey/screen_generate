@@ -1,0 +1,28 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.cps.plugingenerate</id>
+    <name>CPS-Screen-Generate</name>
+    <vendor>cps</vendor>
+
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.cps.plugingenerate.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.cps.plugingenerate.services.MyProjectService"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.cps.plugingenerate.WizardTemplateProviderImpl" />
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.cps.plugingenerate.listeners.MyProjectManagerListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+
+</idea-plugin>
