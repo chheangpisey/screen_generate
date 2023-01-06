@@ -17,7 +17,7 @@
             </repository>
             <repository>
                 <id>github</id>
-                <url>https://github.com/cps-3101/screen_generate</url>
+                <url>https://maven.pkg.github.com/cps-3101/screen_generate</url>
                 <snapshots>
                     <enabled>true</enabled>
                 </snapshots>
@@ -29,7 +29,7 @@
 <servers>
     <server>
         <id>github</id>
-        <username>cps-3101</username>
+        <username>chheangpisey</username>
         <password>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</password>
     </server>
 </servers>
